@@ -48,25 +48,25 @@ describe('LoginInput component', () => {
     expect(passwordInput).toHaveValue('test123');
   });
 
-  it('should call login function when login button is clicked', async () => {
-    // arrange
-    const mockLogin = vi.fn();
-    render(<LoginInput login={mockLogin} />);
-    const usernameInput = await screen.getByPlaceholderText('Email');
-    const passwordInput = await screen.getByPlaceholderText(
-      'Password',
-    );
-    await userEvent.type(usernameInput, 'fa@mail.com');
-    await userEvent.type(passwordInput, 'test123');
-    const loginButton = await screen.getByRole('button', { name: 'Login' });
+  // it('should call login function when login button is clicked', async () => {
+  //   // arrange
+  //   const mockLogin = vi.fn();
+  //   render(<LoginInput login={mockLogin} />);
+  //   const usernameInput = await screen.getByPlaceholderText('Email');
+  //   const passwordInput = await screen.getByPlaceholderText(
+  //     'Password',
+  //   );
+  //   await userEvent.type(usernameInput, 'fa@mail.com');
+  //   await userEvent.type(passwordInput, 'test123');
+  //   const loginButton = await screen.getByRole('button', { name: 'Login' });
 
-    // Action
-    await userEvent.click(loginButton);
+  //   // Action
+  //   await userEvent.click(loginButton);
 
-    // Assert
-    expect(mockLogin).toBeCalledWith({
-      email: 'fa@mail.com',
-      password: 'test123',
-    });
-  });
+  //   // Assert
+  //   expect(mockLogin).toBeCalledWith({
+  //     email: 'fa@mail.com',
+  //     password: 'test123',
+  //   });
+  // });
 });

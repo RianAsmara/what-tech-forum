@@ -30,7 +30,6 @@ describe('LoginInput component', () => {
 
     // action
     await userEvent.type(usernameInput, 'fa@mail.com');
-
     // assert
     expect(usernameInput).toHaveValue('fa@mail.com');
   });

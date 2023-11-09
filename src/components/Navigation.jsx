@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { FaMoon } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-function Navigation({ authUser, signOut }) {
-  const { avatar, name } = authUser;
+function Navigation({ signOut }) {
+  // const { avatar, name } = authUser;
 
   return (
     <div className="flex flex-row justify-between items-center max-h-14 p-5 mx-auto bg-gray-400 shadow-lg ">
@@ -24,29 +24,29 @@ function Navigation({ authUser, signOut }) {
         </button>
         <button className="block w-8 h-8 rounded-full bg-neutral-300  text-center mr-2 " type="button">EN</button>
         <button type="button" onClick={signOut}>
-          <div className="avatar online">
+          Sign Out
+          {/* <div className="avatar online">
             <div className="w-8 rounded-full">
               <img
                 src={avatar}
                 alt={name}
               />
             </div>
-          </div>
+          </div> */}
         </button>
       </div>
     </div>
   );
 }
 
-const authUserShape = {
-  id: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  avatar: PropTypes.string.isRequired,
-
-};
+// const authUserShape = {
+//   id: PropTypes.string.isRequired,
+//   name: PropTypes.string.isRequired,
+//   avatar: PropTypes.string.isRequired,
+// };
 
 Navigation.propTypes = {
-  authUser: PropTypes.shape(authUserShape).isRequired,
+  // authUser: PropTypes.shape(authUserShape).isRequired,
   signOut: PropTypes.func.isRequired,
 };
 

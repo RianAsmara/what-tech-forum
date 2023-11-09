@@ -52,7 +52,7 @@ function App() {
       <Loading />
       <div className="App">
         <header>
-          <Navigation authUser={authUser} signOut={onSignOut} />
+          <Navigation signOut={onSignOut} />
         </header>
         <main>
           <Routes>

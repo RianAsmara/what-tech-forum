@@ -13,7 +13,7 @@ function LoginInput({ login }) {
           <span className="label-text text-lg">Email</span>
         </label>
         <input
-          placeholder="Email"
+          placeholder="Masukkan Email"
           type="email"
           className="input input-bordered w-full"
           value={email}
@@ -26,7 +26,7 @@ function LoginInput({ login }) {
           <span className="label-text text-lg">Password</span>
         </label>
         <input
-          placeholder="Password"
+          placeholder="Masukkan Password"
           type="password"
           className="input input-bordered w-full"
           value={password}

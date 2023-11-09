@@ -16,6 +16,7 @@ function RegisterInput({ register }) {
         <input
           type="text"
           className="input input-bordered w-full"
+          placeholder="Masukkan Nama"
           value={name}
           onChange={onNameChange}
         />
@@ -28,6 +29,7 @@ function RegisterInput({ register }) {
         <input
           type="email"
           className="input input-bordered w-full"
+          placeholder="Masukkan Email"
           value={email}
           onChange={onEmailChange}
         />
@@ -40,6 +42,7 @@ function RegisterInput({ register }) {
         <input
           type="password"
           className="input input-bordered w-full"
+          placeholder="Masukkan Password"
           value={password}
           onChange={onPasswordChange}
         />

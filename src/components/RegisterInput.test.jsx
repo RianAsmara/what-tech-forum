@@ -14,10 +14,7 @@ import {
 } from 'vitest';
 import { cleanup, render, screen } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
-import matchers from '@testing-library/jest-dom/matchers';
 import RegisterInput from './RegisterInput';
-
-expect.extend(matchers);
 
 describe('RegisterInput component', () => {
   afterEach(() => {
@@ -27,7 +24,7 @@ describe('RegisterInput component', () => {
   it('should handle name typing correctly', async () => {
     // arrange
     render(<RegisterInput register={() => {}} />);
-    const nameInput = await screen.getByPlaceholderText('Masukkan nama');
+    const nameInput = await screen.getByPlaceholderText('Masukkan Nama');
 
     // action
     await userEvent.type(nameInput, 'test user');
@@ -39,7 +36,7 @@ describe('RegisterInput component', () => {
   it('should handle email typing correctly', async () => {
     // arrange
     render(<RegisterInput register={() => {}} />);
-    const emailInput = await screen.getByPlaceholderText('Masukkan email');
+    const emailInput = await screen.getByPlaceholderText('Masukkan Email');
 
     // action
     await userEvent.type(emailInput, 'test@mail.com');
@@ -52,7 +49,7 @@ describe('RegisterInput component', () => {
     // arrange
     render(<RegisterInput register={() => {}} />);
     const passwordInput = await screen.getByPlaceholderText(
-      'Masukkan password',
+      'Masukkan Password',
     );
 
     // action
@@ -66,10 +63,10 @@ describe('RegisterInput component', () => {
     // arrange
     const mockRegister = vi.fn();
     render(<RegisterInput register={mockRegister} />);
-    const nameInput = await screen.getByPlaceholderText('Masukkan nama');
-    const emailInput = await screen.getByPlaceholderText('Masukkan email');
+    const nameInput = await screen.getByPlaceholderText('Masukkan Nama');
+    const emailInput = await screen.getByPlaceholderText('Masukkan Email');
     const passwordInput = await screen.getByPlaceholderText(
-      'Masukkan password',
+      'Masukkan Password',
     );
     await userEvent.type(nameInput, 'test user');
     await userEvent.type(emailInput, 'test@mail.com');

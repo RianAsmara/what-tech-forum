@@ -13,8 +13,8 @@ describe('Login spec', () => {
   });
   it('should display login page correctly', () => {
     // memverifikasi elemen yang harus tampak pada halaman login
-    cy.get('input[placeholder="Email"]').should('be.visible');
-    cy.get('input[placeholder="Password"]').should('be.visible');
+    cy.get('input[placeholder="Masukkan Email"]').should('be.visible');
+    cy.get('input[placeholder="Masukkan Password"]').should('be.visible');
     cy.get('button').contains(/^Login$/).should('be.visible');
   });
 
@@ -29,7 +29,7 @@ describe('Login spec', () => {
 
   it('should display alert when password is empty', () => {
     // mengisi email
-    cy.get('input[placeholder="Email"]').type('fa@test.com');
+    cy.get('input[placeholder="Masukkan Email"]').type('fa@test.com');
 
     // klik tombol login tanpa mengisi password
     cy.get('button').contains(/^Login$/).click();
@@ -42,10 +42,10 @@ describe('Login spec', () => {
 
   it('should display alert when email and password are wrong', () => {
     // mengisi email
-    cy.get('input[placeholder="Email"]').type('fa@test.com');
+    cy.get('input[placeholder="Masukkan Email"]').type('fa@test.com');
 
     // mengisi password yang salah
-    cy.get('input[placeholder="Password"]').type('wrong_password');
+    cy.get('input[placeholder="Masukkan Password"]').type('wrong_password');
 
     // menekan tombol Login
     cy.get('button').contains(/^Login$/).click();
@@ -58,10 +58,10 @@ describe('Login spec', () => {
 
   it('should display homepage when email and password are correct', () => {
     // mengisi email
-    cy.get('input[placeholder="Email"]').type('fa@test.com');
+    cy.get('input[placeholder="Masukkan Email"]').type('fa@test.com');
 
     // mengisi password
-    cy.get('input[placeholder="Password"]').type('test123');
+    cy.get('input[placeholder="Masukkan Password"]').type('test123');
 
     // menekan tombol Login
     cy.get('button').contains(/^Login$/).click();
